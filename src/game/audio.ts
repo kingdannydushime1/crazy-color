@@ -247,24 +247,79 @@ export const playCashRegister = () => {
 export const playLevelUpSound = () => {
   if (!audioCtx) return;
   const now = audioCtx.currentTime;
-  
+
   const notes = [261.63, 329.63, 392.00, 523.25, 659.25, 783.99, 1046.50];
   notes.forEach((freq, idx) => {
     const osc = audioCtx!.createOscillator();
     const gain = audioCtx!.createGain();
-    
+
     osc.type = 'triangle';
     osc.frequency.setValueAtTime(freq, now + idx * 0.07);
-    
+
     gain.gain.setValueAtTime(0, now + idx * 0.07);
     gain.gain.linearRampToValueAtTime(0.15, now + idx * 0.07 + 0.01);
     gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.07 + 0.45);
-    
+
     osc.connect(gain);
     gain.connect(audioCtx!.destination);
     osc.start(now + idx * 0.07);
     osc.stop(now + idx * 0.07 + 0.45);
   });
+};
+
+export const playSparkle = () => {
+  if (!audioCtx) return;
+  const now = audioCtx.currentTime;
+  for (let i = 0; i < 3; i++) {
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.type = 'sine';
+    const pitch = 1200 + i * 300 + Math.random() * 200;
+    osc.frequency.setValueAtTime(pitch, now + i * 0.06);
+    gain.gain.setValueAtTime(0, now + i * 0.06);
+    gain.gain.linearRampToValueAtTime(0.08, now + i * 0.06 + 0.01);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.06 + 0.12);
+    osc.connect(gain);
+    gain.connect(audioCtx!.destination);
+    osc.start(now + i * 0.06);
+    osc.stop(now + i * 0.06 + 0.12);
+  }
+};
+
+export const playWhoosh = () => {
+  if (!audioCtx) return;
+  const now = audioCtx.currentTime;
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+  osc.type = 'sine';
+  osc.frequency.setValueAtTime(200, now);
+  osc.frequency.exponentialRampToValueAtTime(800, now + 0.12);
+  gain.gain.setValueAtTime(0, now);
+  gain.gain.linearRampToValueAtTime(0.08, now + 0.02);
+  gain.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
+  osc.connect(gain);
+  gain.connect(audioCtx!.destination);
+  osc.start();
+  osc.stop(now + 0.15);
+};
+
+export const playSplash = () => {
+  if (!audioCtx) return;
+  const now = audioCtx.currentTime;
+  const bufferSize = audioCtx.sampleRate * 0.15;
+  const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+  const data = buffer.getChannelData(0);
+  for (let i = 0; i < bufferSize; i++) {
+    data[i] = (Math.random() * 2 - 1) * Math.exp(-i / (bufferSize * 0.3));
+  }
+  const source = audioCtx.createBufferSource();
+  source.buffer = buffer;
+  const gain = audioCtx.createGain();
+  gain.gain.setValueAtTime(0.12, now);
+  gain.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
+  source.connect(gain);
+  gain.connect(audioCtx!.destination);
+  source.start(now);
 };
 
 export const setBgMusicEnabled = (v: boolean) => { bgMusicEnabled = v; };

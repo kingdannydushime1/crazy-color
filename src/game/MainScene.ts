@@ -46,11 +46,11 @@ const SKINS: SkinData[] = [
   },
   { id: 'crystal', name: 'Cristal', desc: 'Faceted perfume bottle',
     drawBody: (g, c, a) => { g.fillStyle(c, a); g.beginPath(); g.moveTo(0,-55); g.lineTo(10,-55); g.lineTo(10,-40); g.lineTo(30,-15); g.lineTo(28,25); g.lineTo(0,35); g.lineTo(-28,25); g.lineTo(-30,-15); g.lineTo(-10,-40); g.lineTo(-10,-55); g.closePath(); g.fillPath(); },
-    drawFace: (g) => { g.lineStyle(5,0x9c27b0,1); g.beginPath(); g.moveTo(0,-55); g.lineTo(10,-55); g.lineTo(10,-40); g.lineTo(30,-15); g.lineTo(28,25); g.lineTo(0,35); g.lineTo(-28,25); g.lineTo(-30,-15); g.lineTo(-10,-40); g.lineTo(-10,-55); g.closePath(); g.strokePath(); g.lineStyle(1,0xffffff,0.3); g.lineBetween(0,-55,0,35); g.lineBetween(-15,0,15,0); g.fillStyle(0x9c27b0,1); g.fillCircle(-8,-5,3); g.fillCircle(8,-5,3); g.lineStyle(2,0x9c27b0,1); g.beginPath(); g.arc(0,3,3,0.1,Math.PI-0.1,false); g.strokePath(); }
+    drawFace: (g) => { g.lineStyle(5,0x2f3542,1); g.beginPath(); g.moveTo(0,-55); g.lineTo(10,-55); g.lineTo(10,-40); g.lineTo(30,-15); g.lineTo(28,25); g.lineTo(0,35); g.lineTo(-28,25); g.lineTo(-30,-15); g.lineTo(-10,-40); g.lineTo(-10,-55); g.closePath(); g.strokePath(); g.lineStyle(2,0xffffff,0.2); g.lineBetween(0,-55,0,35); g.lineBetween(-15,0,15,0); g.fillStyle(0x2f3542,1); g.fillCircle(-8,-5,3); g.fillCircle(8,-5,3); g.lineStyle(2,0x2f3542,1); g.beginPath(); g.arc(0,3,3,0.1,Math.PI-0.1,false); g.strokePath(); }
   },
   { id: 'ampoule', name: 'Ampoule', desc: 'Vintage light bulb',
     drawBody: (g, c, a) => { g.fillStyle(c, a); g.beginPath(); g.moveTo(-8,-55); g.lineTo(8,-55); g.lineTo(8,-40); g.arc(0,10,25,0.3,Math.PI-0.3,false); g.closePath(); g.fillPath(); },
-    drawFace: (g) => { g.lineStyle(5,0xffd700,1); g.beginPath(); g.moveTo(-8,-55); g.lineTo(8,-55); g.lineTo(8,-40); g.arc(0,10,25,0.3,Math.PI-0.3,false); g.closePath(); g.strokePath(); g.lineStyle(2,0xffd700,0.4); g.lineBetween(-4,-55,-4,-40); g.lineBetween(4,-55,4,-40); g.lineBetween(-6,-48,-2,-48); g.lineBetween(2,-48,6,-48); g.fillStyle(0xffd700,1); g.fillCircle(-6,0,3); g.fillCircle(6,0,3); g.lineStyle(2,0xffd700,1); g.beginPath(); g.arc(0,5,3,0.1,Math.PI-0.1,false); g.strokePath(); }
+    drawFace: (g) => { g.lineStyle(5,0x2f3542,1); g.beginPath(); g.moveTo(-8,-55); g.lineTo(8,-55); g.lineTo(8,-40); g.arc(0,10,25,0.3,Math.PI-0.3,false); g.closePath(); g.strokePath(); g.lineStyle(2,0xffffff,0.2); g.lineBetween(-4,-55,-4,-40); g.lineBetween(4,-55,4,-40); g.lineBetween(-6,-48,-2,-48); g.lineBetween(2,-48,6,-48); g.fillStyle(0x2f3542,1); g.fillCircle(-6,0,3); g.fillCircle(6,0,3); g.lineStyle(2,0x2f3542,1); g.beginPath(); g.arc(0,5,3,0.1,Math.PI-0.1,false); g.strokePath(); }
   },
   { id: 'wine', name: 'Bouteille Vin', desc: 'Elegant wine bottle',
     drawBody: (g, c, a) => { g.fillStyle(c, a); g.beginPath(); g.moveTo(-8,-58); g.lineTo(8,-58); g.lineTo(8,-30); g.lineTo(22,-30); g.lineTo(22,20); g.arc(0,20,22,0,Math.PI,false); g.lineTo(-22,-30); g.lineTo(-8,-30); g.closePath(); g.fillPath(); },
@@ -58,8 +58,28 @@ const SKINS: SkinData[] = [
   },
   { id: 'jar', name: 'Amphore', desc: 'Ancient potion jar',
     drawBody: (g, c, a) => { g.fillStyle(c, a); g.beginPath(); g.moveTo(-14,-40); g.lineTo(14,-40); g.lineTo(18,-25); g.lineTo(28,5); g.arc(0,20,28,0.2,Math.PI-0.2,false); g.lineTo(-18,-25); g.closePath(); g.fillPath(); },
-    drawFace: (g) => { g.lineStyle(5,0x8c5b36,1); g.beginPath(); g.moveTo(-14,-40); g.lineTo(14,-40); g.lineTo(18,-25); g.lineTo(28,5); g.arc(0,20,28,0.2,Math.PI-0.2,false); g.lineTo(-18,-25); g.closePath(); g.strokePath(); g.fillStyle(0xd35400,0.6); g.fillCircle(-20,10,5); g.fillCircle(20,10,5); g.fillStyle(0x2f3542,1); g.fillCircle(-8,10,3); g.fillCircle(8,10,3); g.fillStyle(0xffffff,1); g.fillCircle(-9,8,1.5); g.fillCircle(7,8,1.5); g.lineStyle(2,0x2f3542,1); g.beginPath(); g.arc(0,15,3,0.1,Math.PI-0.1,false); g.strokePath(); }
-  }
+    drawFace: (g) => { g.lineStyle(5,0x2f3542,1); g.beginPath(); g.moveTo(-14,-40); g.lineTo(14,-40); g.lineTo(18,-25); g.lineTo(28,5); g.arc(0,20,28,0.2,Math.PI-0.2,false); g.lineTo(-18,-25); g.closePath(); g.strokePath(); g.fillStyle(0xd35400,0.4); g.fillCircle(-20,10,5); g.fillCircle(20,10,5); g.fillStyle(0x2f3542,1); g.fillCircle(-8,10,3); g.fillCircle(8,10,3); g.fillStyle(0xffffff,1); g.fillCircle(-9,8,1.5); g.fillCircle(7,8,1.5); g.lineStyle(2,0x2f3542,1); g.beginPath(); g.arc(0,15,3,0.1,Math.PI-0.1,false); g.strokePath(); }
+  },
+  { id: 'erlenmeyer', name: 'Erlenmeyer', desc: 'Conical science flask',
+    drawBody: (g, c, a) => { g.fillStyle(c, a); g.beginPath(); g.moveTo(-6,-55); g.lineTo(6,-55); g.lineTo(6,-25); g.lineTo(30,30); g.lineTo(30,35); g.lineTo(-30,35); g.lineTo(-30,30); g.lineTo(-6,-25); g.closePath(); g.fillPath(); },
+    drawFace: (g) => { g.lineStyle(5,0x2f3542,1); g.beginPath(); g.moveTo(-6,-55); g.lineTo(6,-55); g.lineTo(6,-25); g.lineTo(30,30); g.lineTo(30,35); g.lineTo(-30,35); g.lineTo(-30,30); g.lineTo(-6,-25); g.closePath(); g.strokePath(); g.fillStyle(0x2f3542,1); g.fillCircle(-8,10,3.5); g.fillCircle(8,10,3.5); g.fillStyle(0xffffff,1); g.fillCircle(-9,8,1.5); g.fillCircle(7,8,1.5); g.lineStyle(2,0x2f3542,1); g.beginPath(); g.arc(0,15,3,0.1,Math.PI-0.1,false); g.strokePath(); }
+  },
+  { id: 'teardrop', name: 'Larme', desc: 'Elegant teardrop vial',
+    drawBody: (g, c, a) => { g.fillStyle(c, a); g.beginPath(); g.moveTo(-6,-60); g.lineTo(6,-60); g.lineTo(6,-40); g.arc(0,5,24,0.35,Math.PI-0.35,false); g.closePath(); g.fillPath(); },
+    drawFace: (g) => { g.lineStyle(5,0x2f3542,1); g.beginPath(); g.moveTo(-6,-60); g.lineTo(6,-60); g.lineTo(6,-40); g.arc(0,5,24,0.35,Math.PI-0.35,false); g.closePath(); g.strokePath(); g.fillStyle(0x2f3542,1); g.fillCircle(-5,0,3); g.fillCircle(5,0,3); g.fillStyle(0xffffff,1); g.fillCircle(-6,-2,1.5); g.fillCircle(4,-2,1.5); g.lineStyle(2,0x2f3542,1); g.beginPath(); g.arc(0,5,2.5,0.1,Math.PI-0.1,false); g.strokePath(); }
+  },
+  { id: 'diamond', name: 'Diamant', desc: 'Faceted diamond bottle',
+    drawBody: (g, c, a) => { g.fillStyle(c, a); g.beginPath(); g.moveTo(0,-60); g.lineTo(8,-60); g.lineTo(8,-45); g.lineTo(25,-15); g.lineTo(32,5); g.lineTo(30,20); g.lineTo(0,35); g.lineTo(-30,20); g.lineTo(-32,5); g.lineTo(-25,-15); g.lineTo(-8,-45); g.lineTo(-8,-60); g.closePath(); g.fillPath(); },
+    drawFace: (g) => { g.lineStyle(5,0x2f3542,1); g.beginPath(); g.moveTo(0,-60); g.lineTo(8,-60); g.lineTo(8,-45); g.lineTo(25,-15); g.lineTo(32,5); g.lineTo(30,20); g.lineTo(0,35); g.lineTo(-30,20); g.lineTo(-32,5); g.lineTo(-25,-15); g.lineTo(-8,-45); g.lineTo(-8,-60); g.closePath(); g.strokePath(); g.lineStyle(1.5,0xffffff,0.15); g.lineBetween(0,-60,0,35); g.lineBetween(-20,-5,20,-5); g.lineBetween(-12,15,12,15); g.fillStyle(0x2f3542,1); g.fillCircle(-6,-8,2.5); g.fillCircle(6,-8,2.5); g.fillStyle(0xffffff,1); g.fillCircle(-7,-10,1.2); g.fillCircle(5,-10,1.2); g.lineStyle(2,0x2f3542,1); g.beginPath(); g.arc(0,-3,2.5,0.1,Math.PI-0.1,false); g.strokePath(); }
+  },
+  { id: 'skull', name: 'Calice', desc: 'Mysterious gothic chalice',
+    drawBody: (g, c, a) => { g.fillStyle(c, a); g.beginPath(); g.moveTo(-10,-55); g.lineTo(10,-55); g.lineTo(14,-50); g.arc(0,15,30,0.4,Math.PI-0.4,false); g.lineTo(-14,-50); g.closePath(); g.fillPath(); },
+    drawFace: (g) => { g.lineStyle(5,0x2f3542,1); g.beginPath(); g.moveTo(-10,-55); g.lineTo(10,-55); g.lineTo(14,-50); g.arc(0,15,30,0.4,Math.PI-0.4,false); g.lineTo(-14,-50); g.closePath(); g.strokePath(); g.fillStyle(0x2f3542,1); g.fillCircle(-9,8,4); g.fillCircle(9,8,4); g.fillStyle(0xffffff,1); g.fillCircle(-10,6,2); g.fillCircle(8,6,2); g.fillStyle(0x2f3542,1); g.fillTriangle(-4,16,4,16,0,20); g.lineStyle(2,0x2f3542,1); g.beginPath(); g.arc(0,5,3,0.1,Math.PI-0.1,false); g.strokePath(); }
+  },
+  { id: 'kettle', name: 'Bouilloire', desc: 'Round-bottom boiling flask',
+    drawBody: (g, c, a) => { g.fillStyle(c, a); g.beginPath(); g.moveTo(-6,-60); g.lineTo(6,-60); g.lineTo(8,-45); g.arc(0,-10,32,0.25,Math.PI-0.25,false); g.lineTo(-8,-45); g.closePath(); g.fillPath(); },
+    drawFace: (g) => { g.lineStyle(5,0x2f3542,1); g.beginPath(); g.moveTo(-6,-60); g.lineTo(6,-60); g.lineTo(8,-45); g.arc(0,-10,32,0.25,Math.PI-0.25,false); g.lineTo(-8,-45); g.closePath(); g.strokePath(); g.lineStyle(2,0xffffff,0.15); g.lineBetween(-10,-35,-8,-25); g.lineBetween(10,-35,8,-25); g.fillStyle(0x2f3542,1); g.fillCircle(-7,-12,3); g.fillCircle(7,-12,3); g.fillStyle(0xffffff,1); g.fillCircle(-8,-14,1.5); g.fillCircle(6,-14,1.5); g.lineStyle(2,0x2f3542,1); g.beginPath(); g.arc(0,-7,2.5,0.1,Math.PI-0.1,false); g.strokePath(); }
+  },
 ];
 
 const SHOP_ITEMS: ShopItem[] = [
@@ -161,8 +181,8 @@ export default class MainScene extends Phaser.Scene {
   private pipeY = 145; // Elevated to hover beautifully higher above the flasks!
   private currentFlaskSkin = 'classic';
   private currentTheme = 'classic';
-  private ownedSkins: { [key: string]: boolean } = { classic: true };
-  private ownedThemes: { [key: string]: boolean } = { classic: true, neon: false, toxic: false, treasury: false, candy: false, ocean: false, sunset: false, forest: false, space: false, lavender: false };
+  private ownedSkins: { [key: string]: boolean } = { classic: true, round: false, tube: false, beaker: false, pear: false, pot: false, crystal: false, ampoule: false, wine: false, jar: false, erlenmeyer: false, teardrop: false, diamond: false, skull: false, kettle: false };
+  private ownedThemes: { [key: string]: boolean } = { classic: true, neon: false, toxic: false, treasury: false, candy: false, ocean: false, sunset: false, forest: false, space: false, lavender: false, volcano: false, arctic: false, pixel: false, japan: false, egypt: false, cyberpunk: false };
   private mixedColorsCounts: { [key: string]: number } = { r: 1, b: 1, y: 1, orange: 0, green: 0, purple: 0, brown: 0, cyan: 0, magenta: 0, white: 0 };
   private activeShopTab = 'colors';
   private backgroundGraphics: Phaser.GameObjects.Graphics | null = null;
@@ -391,10 +411,18 @@ export default class MainScene extends Phaser.Scene {
     
     // Dynamic Level display right in the center-left of header
     this.headerLevelText = this.add.text(w * 0.45, 12, `LVL ${this.level}`, { fontSize: '12px', color: '#38bdf8', fontStyle: 'bold', fontFamily: 'monospace' }).setOrigin(0.5).setDepth(101);
+
+    // LEADERBOARD toggle button in header
+    const lbBg = this.add.rectangle(w * 0.65, 12, 34, 26, 0x000000, 0.5).setDepth(100).setStrokeStyle(1.5, 0xffd700, 0.5);
+    const lbBtn = this.add.text(w * 0.65, 12, '🏆', { fontSize: '18px' }).setOrigin(0.5).setDepth(101).setInteractive({ useHandCursor: true });
+    lbBtn.on('pointerdown', () => {
+        Audio.initAudio();
+        this.showLeaderboardPopup();
+    });
     
     // Real-time second countdown register
     this.timerText = this.add.text(w - 10, 12, `⏱️ ${this.timeLeft}s`, {
-       fontSize: '13px',
+       fontSize: '14px',
        color: '#ffd700',
        fontStyle: 'bold',
        fontFamily: 'monospace'
@@ -408,14 +436,27 @@ export default class MainScene extends Phaser.Scene {
          if (!this.isValidating && this.timeLeft > 0 && !this.isLevelSuccessPopupOpen && this.currentFlask && !this.isShopOpen && !this.isAdRunning && !this.isHintOpen) {
             if (this.timeLeft > 0) {
                this.timeLeft--;
+               this.timerText.setText(`⏱️ ${this.timeLeft}s`);
                this.updateHealthBar();
-               
-               // Warning feedback flash when time is critical!
+
+               if (this.timeLeft <= 10 && this.timeLeft > 0) {
+                  this.timerText.setColor(this.timeLeft <= 5 ? '#ff4757' : '#ffa502');
+                  if (this.timeLeft <= 5) {
+                     this.tweens.add({
+                        targets: this.timerText,
+                        scale: 1.25,
+                        duration: 100,
+                        yoyo: true,
+                        ease: 'Quad.easeOut'
+                     });
+                  }
+               }
+
                if (this.timeLeft <= 5 && this.timeLeft > 0) {
                   Audio.playBuzzer();
                   this.cameras.main.flash(180, 255, 100, 100, false);
                }
-               
+
                if (this.timeLeft <= 0) {
                   this.gameOver();
                }
@@ -434,6 +475,94 @@ export default class MainScene extends Phaser.Scene {
       else if (event.key === '3' && this.tapData[2]) this.animateAndDispense(this.tapData[2]);
     });
     this.spawnNextFlask();
+
+    if (!localStorage.getItem('tutorial_shown_v2')) {
+       this.time.delayedCall(800, () => this.showTutorial());
+    }
+  }
+
+  showTutorial() {
+    localStorage.setItem('tutorial_shown_v2', '1');
+    const w = this.scale.width;
+    const h = this.scale.height;
+    const r = this.xRatio;
+    let step = 0;
+    const steps = [
+      { title: '🎯 MATCH THE COLOR', desc: 'Mix red, blue & yellow drops to match the target color on the chalkboard above!', arrow: '↓ TARGET' },
+      { title: '🔄 TAP TO DISPENSE', desc: 'Tap buttons 1, 2, or 3 (or press 1/2/3 keys) to drop colors into the flask.', arrow: '↓ TAP HERE' },
+      { title: '⚗️ MIX & MATCH', desc: 'Each drop mixes inside the flask. Watch the % meter climb as you get closer!', arrow: '' },
+      { title: '✅ PERFECT = AUTO-SCORE!', desc: '100% match? The scanner auto-validates! Get coins & a reward multiplier with ads.', arrow: '' },
+    ];
+
+    const tutorialCont = this.add.container(0, 0).setDepth(3000);
+
+    const veil = this.add.rectangle(w/2, h/2, w * 2, h * 2, 0x000000, 0.75).setInteractive();
+    veil.on('pointerdown', (p: any) => p.event.stopPropagation());
+    tutorialCont.add(veil);
+
+    const box = this.add.graphics();
+    const boxW = Math.min(300, w - 60);
+    const boxH = 240;
+    box.fillStyle(0x1a1a2e, 0.98);
+    box.fillRoundedRect(w/2 - boxW/2, h/2 - boxH/2, boxW, boxH, 16);
+    box.lineStyle(3, 0x00f3ff, 1);
+    box.strokeRoundedRect(w/2 - boxW/2, h/2 - boxH/2, boxW, boxH, 16);
+    tutorialCont.add(box);
+
+    const titleText = this.add.text(w/2, h/2 - 80, steps[0].title, {
+      fontSize: '22px', color: '#00f3ff', fontStyle: 'bold', fontFamily: 'sans-serif',
+      stroke: '#000', strokeThickness: 4
+    }).setOrigin(0.5);
+    tutorialCont.add(titleText);
+
+    const descText = this.add.text(w/2, h/2 - 25, steps[0].desc, {
+      fontSize: '13px', color: '#ffffff', fontFamily: 'sans-serif',
+      wordWrap: { width: boxW - 40 }, align: 'center',
+      stroke: '#000', strokeThickness: 2
+    }).setOrigin(0.5);
+    tutorialCont.add(descText);
+
+    const pageText = this.add.text(w/2, h/2 + 35, '1 / ' + steps.length, {
+      fontSize: '11px', color: '#a4b0be', fontFamily: 'monospace'
+    }).setOrigin(0.5);
+    tutorialCont.add(pageText);
+
+    const nextBtnCont = this.add.container(w/2, h/2 + 75);
+    const nextBtnBase = this.add.rectangle(0, 3, 160, 40, 0x0a5f8a).setStrokeStyle(2, 0x000);
+    const nextBtnBody = this.add.rectangle(0, 0, 160, 40, 0x0b8fd6).setStrokeStyle(2, 0x000);
+    const nextBtnText = this.add.text(0, 0, 'NEXT →', {
+      fontSize: '15px', color: '#ffffff', fontStyle: 'bold', fontFamily: 'sans-serif'
+    }).setOrigin(0.5);
+    nextBtnCont.add([nextBtnBase, nextBtnBody, nextBtnText]);
+
+    const advanceStep = () => {
+      step++;
+      if (step >= steps.length) {
+        this.tweens.add({ targets: tutorialCont, alpha: 0, scale: 0.9, duration: 200, onComplete: () => tutorialCont.destroy() });
+        return;
+      }
+      this.tweens.add({
+        targets: [titleText, descText, pageText],
+        alpha: 0, duration: 100,
+        onComplete: () => {
+          titleText.setText(steps[step].title);
+          descText.setText(steps[step].desc);
+          pageText.setText((step + 1) + ' / ' + steps.length);
+          nextBtnText.setText(step === steps.length - 1 ? 'START! 🎮' : 'NEXT →');
+          this.tweens.add({ targets: [titleText, descText, pageText], alpha: 1, duration: 200 });
+        }
+      });
+    };
+
+    const nextHit = this.add.rectangle(w/2, h/2 + 75, 160, 40).setInteractive({ useHandCursor: true });
+    nextHit.on('pointerdown', () => { nextBtnBody.y = 3; nextBtnText.y = 2; advanceStep(); });
+    nextHit.on('pointerup', () => { nextBtnBody.y = 0; nextBtnText.y = 0; });
+    nextHit.on('pointerout', () => { nextBtnBody.y = 0; nextBtnText.y = 0; });
+
+    tutorialCont.add([nextBtnCont, nextHit]);
+
+    tutorialCont.setScale(0.9).setAlpha(0);
+    this.tweens.add({ targets: tutorialCont, scale: 1, alpha: 1, duration: 350, ease: 'Back.easeOut' });
   }
 
   drawTaps(pipeY: number) {
@@ -650,6 +779,13 @@ export default class MainScene extends Phaser.Scene {
       const tapEntry = { color: colorVal, type: colorId, x: idx, cont: tapCont, handle, spout };
       this.tapData.push(tapEntry);
 
+      hitArea.on('pointerover', () => {
+         this.tweens.add({ targets: tapCont, scale: 1.08, duration: 120, ease: 'Quad.easeOut' });
+      });
+      hitArea.on('pointerout', () => {
+         this.tweens.add({ targets: tapCont, scale: 1, duration: 120, ease: 'Quad.easeOut' });
+      });
+
       hitArea.on('pointerdown', () => {
          Audio.startBgMusic();
          Audio.initAudio();
@@ -660,6 +796,10 @@ export default class MainScene extends Phaser.Scene {
 
       // Keyboard hint label above each tap
       this.add.text(tx, tapY - 32, `${idx + 1}`, { fontSize: '14px', color: '#ffffaa', fontStyle: 'bold', fontFamily: 'monospace', stroke: '#000', strokeThickness: 3 }).setOrigin(0.5).setDepth(25);
+
+      const glowCol = idx === 0 ? 0xff4757 : idx === 1 ? 0x1e90ff : 0xffa502;
+      const glow = this.add.circle(tx, tapY + 45, 38, glowCol, 0.12).setDepth(21);
+      this.tweens.add({ targets: glow, alpha: 0.25, scale: 1.12, duration: 1200, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
     });
   }
 
@@ -900,25 +1040,25 @@ export default class MainScene extends Phaser.Scene {
     const board = this.add.graphics();
     // Drop shadow under panel
     board.fillStyle(0x130a05, 0.96);
-    board.fillRoundedRect(-185, -245, 370, 490, 16);
+    board.fillRoundedRect(-185, -255, 370, 510, 16);
     // Real mahogany wood frame
     board.fillStyle(0x4a2711, 1);
-    board.fillRoundedRect(-180, -240, 360, 480, 16);
+    board.fillRoundedRect(-180, -250, 360, 500, 16);
     board.lineStyle(6, 0x1a0b03, 1);
-    board.strokeRoundedRect(-180, -240, 360, 480, 16);
+    board.strokeRoundedRect(-180, -250, 360, 500, 16);
     
     // In-game steel rivets at corners
     board.fillStyle(0xa4b0be, 1);
-    board.fillCircle(-168, -228, 5);
-    board.fillCircle(168, -228, 5);
-    board.fillCircle(-168, 228, 5);
-    board.fillCircle(168, 228, 5);
+    board.fillCircle(-168, -238, 5);
+    board.fillCircle(168, -238, 5);
+    board.fillCircle(-168, 238, 5);
+    board.fillCircle(168, 238, 5);
 
     // Slate blackboard/dark frame background
     board.fillStyle(0x1e272e, 1);
-    board.fillRoundedRect(-165, -130, 330, 310, 10);
+    board.fillRoundedRect(-165, -130, 330, 380, 10);
     board.lineStyle(2.5, 0x2f3542, 1);
-    board.strokeRoundedRect(-165, -130, 330, 310, 10);
+    board.strokeRoundedRect(-165, -130, 330, 380, 10);
 
     this.shopLayer.add([overlay, board]);
 
@@ -1204,9 +1344,9 @@ export default class MainScene extends Phaser.Scene {
       const pageItems = SKINS.slice(page * perPage, (page + 1) * perPage);
 
       const startX = -75;
-      const startY = -50;
+      const startY = -70;
       const spaceX = 150;
-      const spaceY = 95;
+      const spaceY = 85;
 
       pageItems.forEach((skinData, index) => {
          const col = index % 2;
@@ -1333,8 +1473,8 @@ export default class MainScene extends Phaser.Scene {
 
       // Page navigation for skins
       if (totalPages > 1) {
-          const pageLabel = this.add.text(0, 140, `Page ${page + 1}/${totalPages}`, {
-             fontSize: '10px',
+          const pageLabel = this.add.text(0, 195, `Page ${page + 1}/${totalPages}`, {
+             fontSize: '9px',
              color: '#ced6e0',
              fontFamily: 'monospace',
              fontStyle: 'bold'
@@ -1342,8 +1482,10 @@ export default class MainScene extends Phaser.Scene {
           this.shopLayer.add(pageLabel);
 
           if (page > 0) {
-             const prevBtn = this.add.text(-80, 140, '< PREV', {
-                fontSize: '10px', color: '#00f3ff', fontFamily: 'monospace', fontStyle: 'bold'
+             const prevBg = this.add.rectangle(-85, 195, 65, 22, 0x1a3a4a, 0.8).setStrokeStyle(1, 0x00f3ff, 0.5);
+             this.shopLayer.add(prevBg);
+             const prevBtn = this.add.text(-85, 195, '< PREV', {
+                fontSize: '9px', color: '#00f3ff', fontFamily: 'monospace', fontStyle: 'bold'
              }).setOrigin(0.5).setInteractive({ useHandCursor: true });
              prevBtn.on('pointerdown', () => {
                 this.skinPage--;
@@ -1353,8 +1495,10 @@ export default class MainScene extends Phaser.Scene {
           }
 
           if (page < totalPages - 1) {
-             const nextBtn = this.add.text(80, 140, 'NEXT >', {
-                fontSize: '10px', color: '#00f3ff', fontFamily: 'monospace', fontStyle: 'bold'
+             const nextBg = this.add.rectangle(85, 195, 65, 22, 0x1a3a4a, 0.8).setStrokeStyle(1, 0x00f3ff, 0.5);
+             this.shopLayer.add(nextBg);
+             const nextBtn = this.add.text(85, 195, 'NEXT >', {
+                fontSize: '9px', color: '#00f3ff', fontFamily: 'monospace', fontStyle: 'bold'
              }).setOrigin(0.5).setInteractive({ useHandCursor: true });
              nextBtn.on('pointerdown', () => {
                 this.skinPage++;
@@ -1375,7 +1519,13 @@ export default class MainScene extends Phaser.Scene {
         { id: 'sunset', name: 'Sunset Boulevard', desc: 'Warm orange purple twilight', price: 1800 },
         { id: 'forest', name: 'Enchanted Forest', desc: 'Mystical green woods & fireflies', price: 2000 },
         { id: 'space', name: 'Cosmic Void', desc: 'Stars nebulae deep space', price: 2000 },
-        { id: 'lavender', name: 'Lavender Dream', desc: 'Soft purple fields at dusk', price: 2200 }
+        { id: 'lavender', name: 'Lavender Dream', desc: 'Soft purple fields at dusk', price: 2200 },
+        { id: 'volcano', name: 'Volcanic Forge', desc: 'Lava flows & molten rock', price: 2500 },
+        { id: 'arctic', name: 'Arctic Aurora', desc: 'Ice aurora polar night', price: 2500 },
+        { id: 'pixel', name: 'Pixel Dungeon', desc: 'Retro 8-bit dungeon crawl', price: 2800 },
+        { id: 'japan', name: 'Sakura Garden', desc: 'Cherry blossoms zen bamboo', price: 2800 },
+        { id: 'egypt', name: 'Ancient Egypt', desc: 'Pyramids golden hieroglyphs', price: 3000 },
+        { id: 'cyberpunk', name: 'Neon City', desc: 'Rain soaked cyberpunk streets', price: 3000 }
       ];
 
       const perPage = 6;
@@ -1384,9 +1534,9 @@ export default class MainScene extends Phaser.Scene {
       const pageItems = themesList.slice(page * perPage, (page + 1) * perPage);
 
       const startX = -75;
-      const startY = -50;
+      const startY = -70;
       const spaceX = 150;
-      const spaceY = 95;
+      const spaceY = 85;
 
       pageItems.forEach((theme, index) => {
          const col = index % 2;
@@ -1508,8 +1658,8 @@ export default class MainScene extends Phaser.Scene {
 
       // Page navigation for themes
       if (totalPages > 1) {
-          const pageLabel = this.add.text(0, 140, `Page ${page + 1}/${totalPages}`, {
-             fontSize: '10px',
+          const pageLabel = this.add.text(0, 195, `Page ${page + 1}/${totalPages}`, {
+             fontSize: '9px',
              color: '#ced6e0',
              fontFamily: 'monospace',
              fontStyle: 'bold'
@@ -1517,8 +1667,10 @@ export default class MainScene extends Phaser.Scene {
           this.shopLayer.add(pageLabel);
 
           if (page > 0) {
-             const prevBtn = this.add.text(-80, 140, '< PREV', {
-                fontSize: '10px', color: '#00f3ff', fontFamily: 'monospace', fontStyle: 'bold'
+             const prevBg = this.add.rectangle(-85, 195, 65, 22, 0x1a3a4a, 0.8).setStrokeStyle(1, 0x00f3ff, 0.5);
+             this.shopLayer.add(prevBg);
+             const prevBtn = this.add.text(-85, 195, '< PREV', {
+                fontSize: '9px', color: '#00f3ff', fontFamily: 'monospace', fontStyle: 'bold'
              }).setOrigin(0.5).setInteractive({ useHandCursor: true });
              prevBtn.on('pointerdown', () => {
                 this.themePage--;
@@ -1528,8 +1680,10 @@ export default class MainScene extends Phaser.Scene {
           }
 
           if (page < totalPages - 1) {
-             const nextBtn = this.add.text(80, 140, 'NEXT >', {
-                fontSize: '10px', color: '#00f3ff', fontFamily: 'monospace', fontStyle: 'bold'
+             const nextBg = this.add.rectangle(85, 195, 65, 22, 0x1a3a4a, 0.8).setStrokeStyle(1, 0x00f3ff, 0.5);
+             this.shopLayer.add(nextBg);
+             const nextBtn = this.add.text(85, 195, 'NEXT >', {
+                fontSize: '9px', color: '#00f3ff', fontFamily: 'monospace', fontStyle: 'bold'
              }).setOrigin(0.5).setInteractive({ useHandCursor: true });
              nextBtn.on('pointerdown', () => {
                 this.themePage++;
@@ -1541,9 +1695,9 @@ export default class MainScene extends Phaser.Scene {
     }
 
     // Close button at base
-    const closeBtn = this.add.container(0, 195);
-    const closeBase = this.add.rectangle(0, 3, 160, 40, 0x8c1c24).setStrokeStyle(4, 0x1a0604);
-    const closeBody = this.add.rectangle(0, 0, 160, 40, 0xd63031).setStrokeStyle(4, 0x1a0604);
+    const closeBtn = this.add.container(0, 230);
+    const closeBase = this.add.rectangle(0, 3, 160, 36, 0x8c1c24).setStrokeStyle(4, 0x1a0604);
+    const closeBody = this.add.rectangle(0, 0, 160, 36, 0xd63031).setStrokeStyle(4, 0x1a0604);
     const closeText = this.add.text(0, 0, 'CLOSE THE MARKET', {
       fontSize: '13px',
       color: '#ffffff',
@@ -1552,7 +1706,7 @@ export default class MainScene extends Phaser.Scene {
     }).setOrigin(0.5);
     closeBtn.add([closeBase, closeBody, closeText]);
 
-    const closeHit = this.add.rectangle(0, 195, 160, 40).setInteractive({ useHandCursor: true });
+    const closeHit = this.add.rectangle(0, 230, 160, 36).setInteractive({ useHandCursor: true });
     closeHit.on('pointerdown', () => {
       closeBody.y = 3;
       closeText.y = 3;
@@ -1562,6 +1716,15 @@ export default class MainScene extends Phaser.Scene {
     closeHit.on('pointerout', () => { closeBody.y = 0; closeText.y = 0; });
 
     this.shopLayer.add([closeBtn, closeHit]);
+
+    this.shopLayer.setScale(0.9).setAlpha(0);
+    this.tweens.add({
+       targets: this.shopLayer,
+       scale: 1,
+       alpha: 1,
+       duration: 300,
+       ease: 'Back.easeOut'
+    });
   }
 
   closeColorShop() {
@@ -1779,11 +1942,13 @@ export default class MainScene extends Phaser.Scene {
      const adTxt = this.add.text(0, 0, '🎬 FREE AD', { fontSize: '11px', color: '#fff', fontStyle: 'bold', fontFamily: 'monospace' }).setOrigin(0.5);
      adBtnCont.add([adBase, adBody, adTxt]);
      const adHit = this.add.rectangle(0, 0, 100, 36).setInteractive({ useHandCursor: true });
-     adHit.on('pointerdown', () => { adBody.y = 3; adTxt.y = 3; });
-     adHit.on('pointerup', () => {
-         popup.destroy();
-         this.openRecipeHintPopup();
-     });
+      adHit.on('pointerdown', () => { adBody.y = 3; adTxt.y = 3; });
+      adHit.on('pointerup', () => {
+          this.showCrazyRewardedAd("REVEAL RECIPE", 3, () => {
+              popup.destroy();
+              this.openRecipeHintPopup();
+          });
+      });
      adBtnCont.add(adHit);
 
      const closeBtn = this.add.circle(125, -70, 12, 0xd00000).setStrokeStyle(1.5, 0xffffff);
@@ -2257,10 +2422,163 @@ export default class MainScene extends Phaser.Scene {
         }
         bg.fillStyle(0x7c3e9e, 0.3);
         bg.fillRect(0, this.beltY - 4, w, 4);
+    } else if (this.currentTheme === 'volcano') {
+        bg.fillStyle(0x1a0a00, 1);
+        bg.fillRect(0, 0, w, wallHeight);
+        bg.fillStyle(0xff4500, 0.25);
+        for (let i = 0; i < 5; i++) {
+            bg.fillCircle(60 + i * 70, wallHeight - 30, 25 + Math.sin(i) * 10);
+        }
+        bg.fillStyle(0xff6600, 0.15);
+        for (let i = 0; i < 12; i++) {
+            bg.fillCircle(Math.random() * w, wallHeight - Math.random() * 60, 3 + Math.random() * 8);
+        }
+        bg.fillStyle(0xffcc00, 0.08);
+        bg.fillCircle(w / 2, 30, 35);
+        bg.fillStyle(0x2d1300, 0.6);
+        bg.fillTriangle(0, 0, 20, wallHeight, -20, wallHeight);
+        bg.fillTriangle(w, 0, w + 20, wallHeight, w - 20, wallHeight);
+        bg.fillStyle(0xff4500, 0.08);
+        bg.fillRect(0, this.beltY - 4, w, 4);
+    } else if (this.currentTheme === 'arctic') {
+        bg.fillStyle(0x0a1628, 1);
+        bg.fillRect(0, 0, w, wallHeight);
+        bg.fillStyle(0x00ff88, 0.08);
+        for (let i = 0; i < 6; i++) {
+            bg.fillEllipse(30 + i * 60, 40 + i * 20, 50, 8);
+        }
+        bg.fillStyle(0x00ccff, 0.06);
+        for (let i = 0; i < 6; i++) {
+            bg.fillEllipse(50 + i * 55, 60 + i * 18, 45, 6);
+        }
+        bg.fillStyle(0x8844ff, 0.05);
+        for (let i = 0; i < 6; i++) {
+            bg.fillEllipse(20 + i * 65, 80 + i * 15, 40, 5);
+        }
+        bg.fillStyle(0xffffff, 0.4);
+        for (let i = 0; i < 40; i++) {
+            bg.fillCircle(Math.random() * w, Math.random() * wallHeight, 0.5 + Math.random() * 2);
+        }
+        bg.fillStyle(0x1a3a5c, 0.6);
+        bg.fillRect(0, wallHeight - 30, w, 30);
+        bg.fillStyle(0xd0e8f0, 0.2);
+        for (let i = 0; i < 6; i++) {
+            bg.fillTriangle(20 + i * 60, wallHeight - 30, 28 + i * 60, wallHeight - 55, 36 + i * 60, wallHeight - 30);
+        }
+        bg.fillStyle(0x00ccff, 0.15);
+        bg.fillRect(0, this.beltY - 4, w, 4);
+    } else if (this.currentTheme === 'pixel') {
+        bg.fillStyle(0x0d0d2b, 1);
+        bg.fillRect(0, 0, w, wallHeight);
+        bg.fillStyle(0x3b1f6e, 0.5);
+        bg.fillRect(0, wallHeight - 40, w, 40);
+        for (let x = 0; x < w; x += 16) {
+            for (let y = 0; y < wallHeight - 40; y += 16) {
+                if (Math.random() < 0.03) {
+                    bg.fillStyle(0xffffff, 0.3 + Math.random() * 0.5);
+                    bg.fillRect(x, y, 4, 4);
+                }
+            }
+        }
+        bg.fillStyle(0x44aa22, 0.3);
+        for (let i = 0; i < 6; i++) {
+            bg.fillRect(20 + i * 55, wallHeight - 44, 12, 16);
+        }
+        bg.fillStyle(0x8866ff, 0.5);
+        bg.fillRect(30, 90, 12, 20);
+        bg.fillRect(50, 70, 12, 40);
+        bg.fillRect(70, 100, 12, 10);
+        bg.fillStyle(0x44aaff, 0.5);
+        bg.fillRect(170, 60, 12, 50);
+        bg.fillRect(190, 80, 12, 30);
+        bg.fillRect(210, 50, 12, 60);
+        bg.fillStyle(0x221144, 0.3);
+        bg.fillRect(0, this.beltY - 4, w, 4);
+    } else if (this.currentTheme === 'japan') {
+        bg.fillStyle(0xfef0e0, 1);
+        bg.fillRect(0, 0, w, wallHeight);
+        bg.fillStyle(0xffb7c5, 0.4);
+        for (let i = 0; i < 15; i++) {
+            const cx = 30 + Math.random() * (w - 60);
+            const cy = 30 + Math.random() * (wallHeight - 80);
+            for (let p = 0; p < 5; p++) {
+                const a = (p / 5) * Math.PI * 2;
+                bg.fillEllipse(cx + Math.cos(a) * 5, cy + Math.sin(a) * 5, 8, 6);
+            }
+        }
+        bg.fillStyle(0xd4a373, 0.5);
+        for (let i = 0; i < 4; i++) {
+            bg.fillRect(30 + i * 90, wallHeight - 40, 5, 35);
+        }
+        bg.fillStyle(0x6b8e23, 0.25);
+        for (let i = 0; i < 4; i++) {
+            bg.fillTriangle(20 + i * 90, wallHeight - 45, 32 + i * 90, wallHeight - 70, 44 + i * 90, wallHeight - 45);
+        }
+        bg.fillStyle(0xff8c94, 0.15);
+        bg.fillCircle(w / 2, 30, 28);
+        bg.fillStyle(0xccaacc, 0.2);
+        for (let i = 0; i < 5; i++) {
+            bg.fillEllipse(20 + i * 80, 180 + (i % 2) * 25, 30, 6);
+        }
+        bg.fillStyle(0xd4a373, 0.2);
+        bg.fillRect(0, this.beltY - 4, w, 4);
+    } else if (this.currentTheme === 'egypt') {
+        bg.fillStyle(0x1a1208, 1);
+        bg.fillRect(0, 0, w, wallHeight);
+        bg.fillStyle(0xc8a84b, 0.7);
+        bg.fillTriangle(60, wallHeight - 20, 120, 50, 180, wallHeight - 20);
+        bg.fillTriangle(220, wallHeight - 20, 260, 80, 300, wallHeight - 20);
+        bg.fillStyle(0x8b6914, 0.5);
+        bg.fillTriangle(65, wallHeight - 20, 120, 60, 175, wallHeight - 20);
+        bg.fillTriangle(225, wallHeight - 20, 260, 90, 295, wallHeight - 20);
+        bg.fillStyle(0xc8a84b, 0.3);
+        for (let i = 0; i < 20; i++) {
+            const cx = Math.random() * w;
+            const cy = Math.random() * (wallHeight - 40);
+            bg.fillRect(cx, cy, 2, 2);
+        }
+        bg.fillStyle(0x8b6914, 0.15);
+        bg.strokeCircle(w / 2, 45, 22);
+        bg.strokeCircle(w / 2 - 30, 70, 15);
+        bg.strokeCircle(w / 2 + 30, 70, 15);
+        bg.fillStyle(0x2a1f0d, 0.4);
+        bg.fillRect(0, wallHeight - 15, w, 15);
+        bg.fillStyle(0xc8a84b, 0.08);
+        for (let i = 0; i < 8; i++) {
+            bg.fillRect(10 + i * 45, wallHeight - 15, 3, 8);
+        }
+        bg.fillStyle(0x8b6914, 0.2);
+        bg.fillRect(0, this.beltY - 4, w, 4);
+    } else if (this.currentTheme === 'cyberpunk') {
+        bg.fillStyle(0x0a0e1a, 1);
+        bg.fillRect(0, 0, w, wallHeight);
+        bg.fillStyle(0x220044, 0.4);
+        for (let i = 0; i < 8; i++) {
+            bg.fillRect(15 + i * 42, wallHeight - 80 - Math.random() * 60, 20, 80 + Math.random() * 60);
+        }
+        bg.fillStyle(0xff00ff, 0.12);
+        for (let i = 0; i < 8; i++) {
+            const rx = 15 + i * 42;
+            const ry = wallHeight - 80 - Math.random() * 60;
+            bg.fillRect(rx, ry + 10, 20, 3);
+        }
+        bg.fillStyle(0x00ffff, 0.1);
+        for (let i = 0; i < 6; i++) {
+            bg.fillRect(20 + i * 55, 30 + i * 25, 2, 60);
+        }
+        bg.fillStyle(0xffff00, 0.04);
+        for (let i = 0; i < 20; i++) {
+            bg.fillCircle(Math.random() * w, Math.random() * wallHeight * 0.5, 1 + Math.random() * 2);
+        }
+        bg.fillStyle(0x220033, 0.3);
+        bg.fillRect(0, this.beltY - 4, w, 4);
     }
   }
 
-  spawnNextFlask() {
+   spawnNextFlask() {
+    if (this.completedFlasksInLevel === 0) {
+       this.showLevelIntro(this.level);
+    }
     const target = Colors.generateTarget(this.level * 10 + this.completedFlasksInLevel);
     const x = -100;
     const y = this.beltY - 45; 
@@ -2339,9 +2657,14 @@ export default class MainScene extends Phaser.Scene {
     this.pendingRewardCoins = reward;
     this.targetCoinsText.setText(`$+${reward}`);
 
-    // Variable timers based on target complexity: 1 or 2 colors = 30s. 3 colors = 40s.
+    // Variable timers based on target complexity: 1 color = 20s, 2 = 30s, 3 = 40s.
+    // Only set on the first flask — timer continues through subsequent orders.
     const activeColorsCount = (target.r > 0 ? 1 : 0) + (target.b > 0 ? 1 : 0) + (target.y > 0 ? 1 : 0);
-    this.timeLeft = activeColorsCount === 3 ? 40 : 30;
+    const timeForDifficulty = activeColorsCount === 1 ? 20 : activeColorsCount === 2 ? 30 : 40;
+    if (this.completedFlasksInLevel === 0) {
+        this.timeLeft = timeForDifficulty;
+        this.timerText.setColor('#ffd700');
+    }
     this.timerText.setText(`⏱️ ${this.timeLeft}s`);
 
     this.currentFlask = flask;
@@ -2672,9 +2995,12 @@ export default class MainScene extends Phaser.Scene {
         duration: 80,
         yoyo: true
     });
-  }
 
-  updateFlaskVisuals(f: any) {
+    this.createBubbleEffect(flask);
+    this.createImpactRing(flask.x, flask.y - 40, drop.colorValue || 0xffffff);
+   }
+
+   updateFlaskVisuals(f: any) {
     const currentTotal = f.currentDose.r + f.currentDose.b + f.currentDose.y;
     
     if (currentTotal > 0) {
@@ -2748,7 +3074,10 @@ export default class MainScene extends Phaser.Scene {
 
             if (isMatch) {
                 Audio.playWin();
-                
+
+                this.flashScreen(0x2ed573, 500);
+                this.cameras.main.shake(120, 0.008);
+
                 // Burst satisfying colorful confetti on winning mix!
                 this.spawnConfettiRain(45);
 
@@ -3068,7 +3397,95 @@ export default class MainScene extends Phaser.Scene {
             console.warn("CrazyGames rewarded ad failed:", error);
             this.isAdRunning = false;
             Audio.resumeBgMusic();
+          });
+   }
+
+   saveHighScore() {
+      const sdk = (window as any).CrazyGames?.SDK;
+      const canUseCrazy = sdk && (sdk.environment === 'local' || sdk.environment === 'crazygames');
+      if (canUseCrazy && sdk.leaderboard) {
+         sdk.leaderboard.setScore({ score: this.coins, data: JSON.stringify({ level: this.level }) })
+            .then(() => {})
+            .catch(() => {});
+      }
+   }
+
+   showLeaderboardPopup() {
+      if (this.isValidating || this.isAdRunning) return;
+
+      const w = this.scale.width;
+      const h = this.scale.height;
+      const popup = this.add.container(w / 2, h / 2).setDepth(500);
+
+      const veil = this.add.rectangle(0, 0, w * 2, h * 2, 0x000000, 0.8).setInteractive();
+      veil.on('pointerdown', (p: any) => p.event.stopPropagation());
+
+      const board = this.add.graphics();
+      board.fillStyle(0x0c0d14, 0.95);
+      board.fillRoundedRect(-155, -145, 310, 290, 16);
+      board.fillStyle(0x131528, 0.98);
+      board.fillRoundedRect(-150, -140, 300, 280, 16);
+      board.lineStyle(4, 0xffd700, 1);
+      board.strokeRoundedRect(-150, -140, 300, 280, 16);
+
+      const title = this.add.text(0, -115, '🏆 LEADERBOARD 🏆', { fontSize: '16px', color: '#ffd700', fontStyle: 'bold', fontFamily: 'monospace', stroke: '#000', strokeThickness: 3 }).setOrigin(0.5);
+
+      const sdk = (window as any).CrazyGames?.SDK;
+      const canUseCrazy = sdk && (sdk.environment === 'local' || sdk.environment === 'crazygames');
+      let yOff = -75;
+
+      if (canUseCrazy && sdk.leaderboard) {
+         const listCont = this.add.container(0, 0);
+         const loadingText = this.add.text(0, yOff, 'Loading...', { fontSize: '12px', color: '#a4b0be', fontFamily: 'monospace' }).setOrigin(0.5);
+         listCont.add(loadingText);
+
+         sdk.leaderboard.getScores()
+            .then((entries: any[]) => {
+               listCont.removeAll(true);
+               entries.slice(0, 20).forEach((entry, i) => {
+                  const rank = entry.rank ?? (i + 1);
+                  const name = entry.playerName || `Player${rank}`;
+                  const score = entry.score ?? 0;
+                  const medal = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : `${rank}.`;
+                  const row = this.add.text(0, yOff + i * 18, `${medal} ${name.padEnd(16, ' ')} $${score}`, { fontSize: '10px', color: rank <= 3 ? '#ffd700' : '#ced6e0', fontFamily: 'monospace' }).setOrigin(0.5);
+                  listCont.add(row);
+               });
+            })
+            .catch(() => {
+               listCont.removeAll(true);
+               const err = this.add.text(0, yOff, 'Leaderboard unavailable', { fontSize: '12px', color: '#ff4757', fontFamily: 'monospace' }).setOrigin(0.5);
+               listCont.add(err);
+            });
+         popup.add(listCont);
+      } else {
+         const mockEntries = [
+            { rank: 1, name: '🧪 Alchemist', score: 9999 },
+            { rank: 2, name: '🔥 ChemMaster', score: 7500 },
+            { rank: 3, name: '💧 PotionPro', score: 5200 },
+            { rank: 4, name: '— You —', score: this.coins },
+            { rank: 5, name: '🌟 MixWizard', score: 3100 },
+         ];
+         mockEntries.forEach((entry, i) => {
+            const medal = entry.rank === 1 ? '🥇' : entry.rank === 2 ? '🥈' : entry.rank === 3 ? '🥉' : `${entry.rank}.`;
+            const row = this.add.text(0, yOff + i * 22, `${medal} ${entry.name.padEnd(16, ' ')} $${entry.score}`, { fontSize: '11px', color: entry.rank === 4 ? '#00f3ff' : entry.rank <= 3 ? '#ffd700' : '#ced6e0', fontFamily: 'monospace', fontStyle: entry.rank === 4 ? 'bold' : 'normal' }).setOrigin(0.5);
+            popup.add(row);
          });
+      }
+
+      const closeCont = this.add.container(0, 120);
+      const closeBase = this.add.rectangle(0, 3, 120, 34, 0x8c1c24).setStrokeStyle(3, 0x000);
+      const closeBody = this.add.rectangle(0, 0, 120, 34, 0xd63031).setStrokeStyle(3, 0x000);
+      const closeText = this.add.text(0, 0, 'CLOSE', { fontSize: '13px', color: '#ffffff', fontStyle: 'bold', fontFamily: 'monospace' }).setOrigin(0.5);
+      closeCont.add([closeBase, closeBody, closeText]);
+
+      const closeHit = this.add.rectangle(0, 120, 120, 34).setInteractive({ useHandCursor: true });
+      closeHit.on('pointerdown', () => { closeBody.y = 3; closeText.y = 3; });
+      closeHit.on('pointerup', () => { closeBody.y = 0; closeText.y = 0; popup.destroy(); });
+      closeHit.on('pointerout', () => { closeBody.y = 0; closeText.y = 0; });
+
+      popup.add([veil, board, title, closeCont, closeHit]);
+      popup.setScale(0.9).setAlpha(0);
+      this.tweens.add({ targets: popup, scale: 1, alpha: 1, duration: 300, ease: 'Back.easeOut' });
    }
 
    promptRefillUndosPopup() {
@@ -3432,25 +3849,179 @@ export default class MainScene extends Phaser.Scene {
       });
   }
 
-  createSplashParticles(x: number, y: number, color: number) {
-    for(let i=0; i<6; i++) {
-        const p = this.add.circle(x, y, Phaser.Math.Between(3, 6), color).setDepth(35);
-        this.physics.world.enable(p);
-        const body = p.body as Phaser.Physics.Arcade.Body;
-        body.setVelocity(Phaser.Math.Between(-60, 60), Phaser.Math.Between(-150, -50));
-        body.setGravityY(400);
+   createSplashParticles(x: number, y: number, color: number) {
+     const lightColors = [0xffffff, 0xffe0e0, 0xe0ffe0, 0xe0e0ff, 0xffe0ff, 0xe0ffff, 0xffffe0, 0xfff0e0];
+     for(let i=0; i<14; i++) {
+         const r = Phaser.Math.Between(2, 7);
+         const c = i < 8 ? color : lightColors[Phaser.Math.Between(0, lightColors.length - 1)];
+         const p = this.add.circle(x + Phaser.Math.Between(-4, 4), y + Phaser.Math.Between(-4, 4), r, c).setDepth(35);
+         this.physics.world.enable(p);
+         const body = p.body as Phaser.Physics.Arcade.Body;
+         body.setVelocity(Phaser.Math.Between(-120, 120), Phaser.Math.Between(-280, -60));
+         body.setGravityY(500);
 
-        this.tweens.add({
-            targets: p,
-            scale: 0,
-            duration: 600,
-            ease: 'Power2',
-            onComplete: () => p.destroy()
-        });
-    }
-  }
+         this.tweens.add({
+             targets: p,
+             scale: 0,
+             alpha: 0,
+             duration: 500 + Math.random() * 300,
+             ease: 'Power2',
+             delay: Math.random() * 50,
+             onComplete: () => p.destroy()
+         });
+     }
+   }
 
-  update(time: number, delta: number) {
+   createBubbleEffect(flask: any) {
+      const fx = flask.x;
+      const fy = flask.y - 40;
+      for (let i = 0; i < 5; i++) {
+         const br = Phaser.Math.Between(2, 5);
+         const bubble = this.add.circle(
+            fx + Phaser.Math.Between(-12, 12),
+            fy + Phaser.Math.Between(-8, 8),
+            br, 0xffffff, 0.4 + Math.random() * 0.3
+         ).setDepth(21);
+         this.tweens.add({
+            targets: bubble,
+            y: fy - 30 - Math.random() * 30,
+            x: fx + Phaser.Math.Between(-15, 15),
+            alpha: 0,
+            scale: 0.5 + Math.random() * 1.5,
+            duration: 400 + Math.random() * 300,
+            ease: 'Quad.easeOut',
+            delay: i * 30,
+            onComplete: () => bubble.destroy()
+         });
+      }
+   }
+
+   createImpactRing(x: number, y: number, color: number) {
+      const ring = this.add.circle(x, y, 4, color, 0.6).setDepth(30).setScale(1);
+      this.tweens.add({
+         targets: ring,
+         scale: 5,
+         alpha: 0,
+         duration: 350,
+         ease: 'Quad.easeOut',
+         onComplete: () => ring.destroy()
+      });
+   }
+
+   animatePopupIn(container: Phaser.GameObjects.Container, content: Phaser.GameObjects.GameObject[], overlay?: Phaser.GameObjects.GameObject) {
+      container.setScale(0.85).setAlpha(0);
+      content.forEach(c => c.setAlpha(0));
+      this.tweens.add({
+         targets: container,
+         scale: 1,
+         alpha: 1,
+         duration: 350,
+         ease: 'Back.easeOut'
+      });
+      content.forEach((c, i) => {
+         this.tweens.add({
+            targets: c,
+            alpha: 1,
+            duration: 250,
+            delay: 50 + i * 20,
+            ease: 'Sine.easeIn'
+         });
+      });
+   }
+
+   animatePopupOut(container: Phaser.GameObjects.Container, onComplete?: () => void) {
+      this.tweens.add({
+         targets: container,
+         scale: 0.9,
+         alpha: 0,
+         duration: 180,
+         ease: 'Quad.easeIn',
+         onComplete: () => {
+            container.destroy();
+            if (onComplete) onComplete();
+         }
+      });
+   }
+
+   addPulseGlow(x: number, y: number, color: number, radius: number, depth: number, parent?: Phaser.GameObjects.Container) {
+      const glow = this.add.circle(x, y, radius, color, 0.15).setDepth(depth);
+      this.tweens.add({
+         targets: glow,
+         alpha: 0.3,
+         scale: 1.15,
+         duration: 1200,
+         yoyo: true,
+         repeat: -1,
+         ease: 'Sine.easeInOut'
+      });
+      if (parent) parent.add(glow);
+      return glow;
+   }
+
+   showLevelIntro(level: number) {
+      Audio.playWhoosh();
+      const w = this.scale.width;
+      const h = this.scale.height;
+      const cont = this.add.container(w / 2, h / 2).setDepth(2000);
+      const glow = this.add.rectangle(0, 0, w, h, 0x00f3ff, 0.08).setScale(0);
+      const bg = this.add.rectangle(0, 0, 260, 100, 0x0a0a1a, 0.95).setStrokeStyle(2, 0x00f3ff);
+      const lvlText = this.add.text(0, -10, `LEVEL ${level}`, {
+         fontSize: '36px', color: '#00f3ff', fontStyle: 'bold', fontFamily: 'sans-serif',
+         stroke: '#000', strokeThickness: 5
+      }).setOrigin(0.5);
+      const subText = this.add.text(0, 28, 'GET READY...', {
+         fontSize: '13px', color: '#a4b0be', fontFamily: 'monospace'
+      }).setOrigin(0.5);
+      cont.add([glow, bg, lvlText, subText]);
+
+      cont.setScale(0.5).setAlpha(0);
+      this.tweens.add({
+         targets: cont, scale: 1, alpha: 1,
+         duration: 400, ease: 'Back.easeOut'
+      });
+      this.tweens.add({
+         targets: glow, scale: 3, alpha: 0,
+         duration: 600, ease: 'Quad.easeOut'
+      });
+      this.time.delayedCall(1800, () => {
+         this.tweens.add({
+            targets: cont, scale: 1.2, alpha: 0,
+            duration: 250, ease: 'Quad.easeIn',
+            onComplete: () => cont.destroy()
+         });
+      });
+   }
+
+   showFloatingText(x: number, y: number, text: string, color: string = '#ffffff', size: string = '18px') {
+      const t = this.add.text(x, y, text, {
+         fontSize: size, color, fontStyle: 'bold', fontFamily: 'sans-serif',
+         stroke: '#000000', strokeThickness: 4
+      }).setOrigin(0.5).setDepth(1000).setScale(0.5);
+      this.tweens.add({
+         targets: t,
+         y: y - 80,
+         scale: 1.2,
+         alpha: 0,
+         duration: 900,
+         ease: 'Quad.easeOut',
+         onComplete: () => t.destroy()
+      });
+   }
+
+   flashScreen(color: number, duration: number = 400) {
+      const w = this.scale.width;
+      const h = this.scale.height;
+      const flash = this.add.rectangle(w / 2, h / 2, w, h, color, 0.4).setDepth(1999);
+      this.tweens.add({
+         targets: flash,
+         alpha: 0,
+         duration,
+         ease: 'Quad.easeOut',
+         onComplete: () => flash.destroy()
+      });
+   }
+
+   update(time: number, delta: number) {
     if (this.beltGraphics && !this.isValidating && this.timeLeft > 0 && !this.isLevelSuccessPopupOpen && !this.isShopOpen && !this.isAdRunning && !this.isHintOpen) {
       this.beltScrollX -= 280 * (delta / 1000); 
       this.drawBeltPattern();
@@ -3494,6 +4065,9 @@ export default class MainScene extends Phaser.Scene {
             child.destroy();
         } else if (child.y > this.scale.height) { 
             child.destroy();
+        } else if (child.body && child.body.velocity.y > 200 && Math.random() < 0.2) {
+            const trail = this.add.circle(child.x, child.y, 2, child.colorValue, 0.4).setDepth(24);
+            this.tweens.add({ targets: trail, alpha: 0, scale: 0, duration: 200, onComplete: () => trail.destroy() });
         }
       }
     });
@@ -3618,39 +4192,40 @@ export default class MainScene extends Phaser.Scene {
     g.fillCircle(0, 0, 2.5);
   }
 
-  sprayGoldCoins(x: number, y: number) {
-     const coinAmount = 25;
-     for (let i = 0; i < coinAmount; i++) {
-        const coinCont = this.add.container(x, y).setDepth(60);
-        const coinG = this.add.graphics();
-        this.drawGoldCoin(coinG, 8);
-        coinCont.add(coinG);
-        
-        // Spin animation
-        this.tweens.add({
-           targets: coinCont,
-           scaleX: 0,
-           duration: 120 + Math.random() * 100,
-           yoyo: true,
-           repeat: -1
-        });
+   sprayGoldCoins(x: number, y: number) {
+      const coinAmount = 35;
+      for (let i = 0; i < coinAmount; i++) {
+         const coinCont = this.add.container(x + Phaser.Math.Between(-8, 8), y + Phaser.Math.Between(-8, 8)).setDepth(60);
+         const coinG = this.add.graphics();
+         this.drawGoldCoin(coinG, Phaser.Math.Between(6, 10));
+         coinCont.add(coinG);
 
-        this.physics.world.enable(coinCont);
-        this.coinsGroup.add(coinCont);
-        
-        const body = coinCont.body as Phaser.Physics.Arcade.Body;
-        body.setCircle(8, -8, -8);
-        
-        // Fountain explosion vectors: spray high up and spread left/right
-        const vx = Phaser.Math.Between(-240, 60);
-        const vy = Phaser.Math.Between(-480, -220);
-        body.setVelocity(vx, vy);
-        body.setGravityY(1100);
-        
-        (coinCont as any).bounces = 0;
-        (coinCont as any).colorValue = 0xffd700;
-     }
-  }
+         const spinSpeed = 80 + Math.random() * 120;
+         this.tweens.add({
+            targets: coinCont,
+            scaleX: 0,
+            duration: spinSpeed,
+            yoyo: true,
+            repeat: -1
+         });
+
+         this.physics.world.enable(coinCont);
+         this.coinsGroup.add(coinCont);
+
+         const body = coinCont.body as Phaser.Physics.Arcade.Body;
+         body.setCircle(8, -8, -8);
+
+         const angle = Math.random() * Math.PI - Math.PI / 2;
+         const speed = Phaser.Math.Between(160, 480);
+         const vx = Math.cos(angle) * speed * Phaser.Math.FloatBetween(0.7, 1.3);
+         const vy = Math.sin(angle) * speed * Phaser.Math.FloatBetween(0.7, 1.0);
+         body.setVelocity(vx, vy);
+         body.setGravityY(1000);
+
+         (coinCont as any).bounces = 0;
+         (coinCont as any).colorValue = 0xffd700;
+      }
+   }
 
   deliverProductStack() {
      // Play cute delivery truck trumpets
@@ -3704,9 +4279,11 @@ export default class MainScene extends Phaser.Scene {
      }
      
      Audio.initAudio();
-     Audio.playLevelUpSound();
-     
-     // Delay play of register coin chime
+      Audio.playLevelUpSound();
+
+      this.saveHighScore();
+
+      // Delay play of register coin chime
      setTimeout(() => {
          Audio.playCashRegister();
      }, 500);
@@ -3836,39 +4413,74 @@ export default class MainScene extends Phaser.Scene {
      nextHit.on('pointerup', () => { nextBtnBody.y = 0; nextBtnText.y = 0; });
      nextHit.on('pointerout', () => { nextBtnBody.y = 0; nextBtnText.y = 0; });
      
-     popup.add([adBtnCont, adHit, nextBtnCont, nextHit]);
-  }
+      popup.add([adBtnCont, adHit, nextBtnCont, nextHit]);
+      popup.setScale(0.92).setAlpha(0);
+      this.tweens.add({ targets: popup, scale: 1, alpha: 1, duration: 400, ease: 'Back.easeOut' });
+   }
 
-  spawnConfettiRain(amount: number) {
-     const colors = [0xff4757, 0x2ed573, 0x1e90ff, 0xffa502, 0xff6b81, 0x70a1ff, 0xff00cc, 0xffff00];
-     for (let i = 0; i < amount; i++) {
-         const cx = Phaser.Math.Between(15, this.scale.width - 15);
-         const cy = Phaser.Math.Between(-150, -10);
-         const size = Phaser.Math.Between(5, 10);
-         const col = colors[Phaser.Math.Between(0, colors.length - 1)];
-         
-         const rShape = this.add.rectangle(cx, cy, size, size * 1.6, col).setDepth(205);
-         this.physics.world.enable(rShape);
-         
-         const body = rShape.body as Phaser.Physics.Arcade.Body;
-         body.setAllowGravity(true);
-         body.setGravityY(280);
-         body.setVelocityY(Phaser.Math.Between(90, 220));
-         body.setVelocityX(Phaser.Math.Between(-70, 70));
-         
-         if (Math.random() < 0.5) rShape.setAngle(Phaser.Math.Between(0, 360));
-         
-         this.tweens.add({
-             targets: rShape,
-             angle: 360,
-             duration: Phaser.Math.Between(800, 1800),
-             repeat: -1,
-             ease: 'Linear'
-         });
-         
-         this.activeConfettiGroup.add(rShape);
-     }
-  }
+   spawnConfettiRain(amount: number) {
+      const colors = [0xff4757, 0x2ed573, 0x1e90ff, 0xffa502, 0xff6b81, 0x70a1ff, 0xff00cc, 0xffff00, 0xffd700, 0xff9ff3];
+      for (let i = 0; i < amount; i++) {
+          const cx = Phaser.Math.Between(10, this.scale.width - 10);
+          const cy = Phaser.Math.Between(-200, -20);
+          const col = colors[i % colors.length];
+          const shape = Math.random();
+
+          let piece: Phaser.GameObjects.Rectangle | Phaser.GameObjects.Circle;
+          let w: number, h: number;
+          if (shape < 0.5) {
+            w = Phaser.Math.Between(5, 10);
+            h = w * Phaser.Math.FloatBetween(1.2, 2.0);
+            piece = this.add.rectangle(cx, cy, w, h, col).setDepth(205);
+          } else if (shape < 0.8) {
+            const r = Phaser.Math.Between(3, 6);
+            piece = this.add.circle(cx, cy, r, col).setDepth(205);
+          } else {
+            w = Phaser.Math.Between(6, 10);
+            piece = this.add.rectangle(cx, cy, w, w, col).setDepth(205).setAngle(45);
+          }
+
+          this.physics.world.enable(piece);
+
+          const body = piece.body as Phaser.Physics.Arcade.Body;
+          body.setAllowGravity(true);
+          body.setGravityY(Phaser.Math.Between(180, 320));
+          body.setVelocityY(Phaser.Math.Between(60, 200));
+          body.setVelocityX(Phaser.Math.Between(-100, 100));
+          body.setDragX(20);
+
+          const rotSpeed = Phaser.Math.Between(600, 2000);
+          const rotDir = Math.random() < 0.5 ? 360 : -360;
+          this.tweens.add({
+              targets: piece,
+              angle: rotDir,
+              duration: rotSpeed,
+              repeat: -1,
+              ease: 'Linear'
+          });
+
+          if (i % 3 === 0) {
+            const sparkle = this.add.circle(cx, cy, 1.5, 0xffffff).setDepth(206).setAlpha(0.9);
+            this.physics.world.enable(sparkle);
+            const sBody = sparkle.body as Phaser.Physics.Arcade.Body;
+            sBody.setGravityY(200);
+            sBody.setVelocityY(Phaser.Math.Between(40, 120));
+            sBody.setVelocityX(Phaser.Math.Between(-50, 50));
+            this.tweens.add({
+              targets: sparkle,
+              alpha: 0,
+              scale: 2,
+              duration: 400 + Math.random() * 400,
+              yoyo: true,
+              repeat: -1,
+              ease: 'Sine.easeInOut'
+            });
+            this.activeConfettiGroup.add(sparkle);
+          }
+
+          this.activeConfettiGroup.add(piece);
+      }
+   }
 
   triggerSimulatedCommercialAd() {
       this.showCrazyRewardedAd("CLAIM EXTRA COINS", 3, () => {
