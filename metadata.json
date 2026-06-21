@@ -1,0 +1,8 @@
+{
+  "name": "Mix Colors7",
+  "description": "Blend primary colors to match target shades in a minimalist, button-free puzzle experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
